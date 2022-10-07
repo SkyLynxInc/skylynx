@@ -1,0 +1,154 @@
+.career-hero {
+    background-image: url('../img/job-hero.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+    background-repeat: no-repeat;
+    height: 20vh;
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+.career-hero-text {
+    position: relative;
+    top: 40%;
+}
+
+.career-hero-text span {
+    display: block;
+}
+
+.title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.body {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .career-hero {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: right;
+    }
+
+    .career-hero-text {
+        position: inherit;
+        margin-right: 2%;
+    }
+
+    .career-hero-text span {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .career-hero {
+        height: 200px;
+    }
+
+    .career-hero-text {
+        width: 400px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .career-hero {
+        height: 250px;
+    }
+    .career-hero-text {
+        margin-right: 10%;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.job-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #273D4A;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.overview, .resp, .reqs {
+    margin: 10px 0;
+}
+
+.resp ul li, .reqs ul li {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.btn {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 20px;
+    background-image:linear-gradient(to top, #2b495a 50%, #273D4A 50%);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn a:last-of-type {
+    background-image:linear-gradient(to top, #968341 50%, #9c8a4c 50%);
+    padding: 15px 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .body-wrap {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .btn {
+        font-size: 15px;
+    }
+    
+    .btn a:hover {
+        background-image:linear-gradient(to bottom, #2b495a 50%, #273D4A 50%);
+    }
+
+    .btn a:last-of-type:hover {
+        background-image:linear-gradient(to top, #9c8a4c 50%, #968341 50%);
+    }
+    
+    .body-wrap {
+        width: 70%;
+    }
+
+    .job-title {
+        font-size: 30px;
+    }
+    .overview, .resp, .reqs {
+        margin: 20px 0;
+        font-size: 18px;
+    }
+}
