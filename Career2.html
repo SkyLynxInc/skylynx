@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+<title>Jobs Page</title>
+
+</head>
+
+<body>
+
+<div id="jobs">
+
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+var settings = {
+
+"async": true,
+
+"crossDomain": true,
+
+"url": "https://api.turbohire.co/api/careerpagejobs",
+
+"method": "POST",
+
+"headers": {
+
+"X-Api-Key": "{616AE863-759C-4A47-AC80-AFDC7A77803E}",
+
+"Accept": "*/*",
+
+"Cache-Control": "no-cache",
+
+"Host": "api.turbohire.co",
+
+"Accept-Encoding": "gzip, deflate",
+
+"Content-Length": "0",
+
+"Connection": "keep-alive",
+
+"cache-control": "no-cache"
+
+}
+
+}
+
+$(document).ready(function () {
+
+$.ajax(settings).done(function (response) {
+
+response.Result.forEach(function (job) {
+
+$("#jobs").append($(`<div style="display: flex;flex-direction: column;width: 20%;">
+
+<h1>${job.JobTitle}</h1>
+
+<div>${job.JobDescription}</div>
+
+<button><a href="${job.ApplyUrl}"> Apply </a></button>
+
+</div>`));
+
+})
+
+});
+
+})
+
+</script>
+
+</html>
